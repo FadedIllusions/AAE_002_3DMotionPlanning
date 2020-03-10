@@ -1,6 +1,8 @@
 # AAE_002_3DMotionPlanning
 Project 002 of Udacity's Autonomous Aerial Engineer ("Flying Car") Nanodegree, "3D Motion Planning". 
 
+![Quad Image](./images/MotionPlanning_001.png)
+
 All of the motion planning is done in the file planning_utils.py, within which we first use the given obstacle data (colliders.csv) to create a grid/map of the environment upon which we can perform A* Star Search with a constraint of valid actions.  Once a proposed path is found and returned (along with the respective cost value of the path), a collinearity check is performed upon the returned path so as to further the given path before passing it to the quadrotor as a set of desired waypoints to traverse to the desired goal.
 
 
@@ -79,6 +81,6 @@ wp2[3] = np.arctan2((wp2[1]-wp1[1]), (wp2[0]-wp1[0]))
 This may not be completely intuitive, but this will yield a yaw angle that is positive counterclockwise about a z-axis (down) axis that points downward.
 
 Put all of these together and make up your own crazy paths to fly! Can you fly a double helix?? 
-![Double Helix](./misc/double_helix.gif)
+![Double Helix](./images/double_helix.gif
 
 Ok flying a double helix might seem like a silly idea, but imagine you are an autonomous first responder vehicle. You need to first fly to a particular building or location, then fly a reconnaissance pattern to survey the scene! Give it a try!
